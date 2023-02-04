@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="RepasoExamen.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AppVersion" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">1.0.0</Value>
+    </Setting>
+    <Setting Name="Titulo" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Componentes</Value>
+    </Setting>
+    <Setting Name="Autor" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Ian Tauzy</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

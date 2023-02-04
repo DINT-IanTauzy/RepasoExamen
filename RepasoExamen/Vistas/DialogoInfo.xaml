@@ -1,0 +1,30 @@
+﻿<Window x:Class="RepasoExamen.Vistas.DialogoInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RepasoExamen.Vistas"
+        xmlns:properties="clr-namespace:RepasoExamen.Properties"
+        mc:Ignorable="d"
+        Title="Acerca de" Height="250" Width="700" Icon="../Assets/info.ico" ResizeMode="NoResize" ShowInTaskbar="False">
+    <Window.Resources>
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+    </Window.Resources>
+    <DockPanel LastChildFill="False">
+        <TextBlock HorizontalAlignment="Center" FontSize="40" DockPanel.Dock="Top">
+            <Run Text="{Binding Source={x:Static properties:Settings.Default}, Path=Titulo,Mode=OneWay}"/>
+        </TextBlock>
+        <TextBlock FontSize="18" DockPanel.Dock="Top">
+            <Run Text="Autor: "/>
+            <Run Text="{Binding Source={x:Static properties:Settings.Default}, Path=Autor,Mode=OneWay}"/>
+        </TextBlock>
+        <TextBlock FontSize="18" DockPanel.Dock="Top">
+                <Run>Versión: </Run>
+                <Run Text="{Binding Source={x:Static properties:Settings.Default}, Path=AppVersion, Mode=OneWay}"/>
+        </TextBlock>
+        <Button Content="Cerrar" Margin="5" DockPanel.Dock="Bottom" IsDefault="True" Click="Button_Click"/>
+    </DockPanel>
+</Window>
