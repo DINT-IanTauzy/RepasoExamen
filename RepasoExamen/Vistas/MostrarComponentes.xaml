@@ -4,9 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RepasoExamen.Vistas"
+             xmlns:convertidores="clr-namespace:RepasoExamen.Convertidores"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
+        <convertidores:ConvertidorPrecio x:Key="ConvertidorPrecio"/>
         <Style TargetType="{x:Type TextBlock}">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -26,6 +28,6 @@
             </TextBlock.Effect>
         </TextBlock>
         <Image Grid.Row="1" Source="{Binding Path=Componente.Foto}" />
-        <TextBlock Text="{Binding Path=Componente.Precio}" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" />
+        <TextBlock Text="{Binding Path=Componente.Precio, Converter={StaticResource ConvertidorPrecio}}" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
     </Grid>
 </UserControl>
